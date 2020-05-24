@@ -14,6 +14,7 @@
 		BDE0E978247950E200AC5DA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE0E977247950E200AC5DA9 /* Preview Assets.xcassets */; };
 		BDE0E97B247950E200AC5DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE0E979247950E200AC5DA9 /* LaunchScreen.storyboard */; };
 		BDE0E986247950E200AC5DA9 /* TodolistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0E985247950E200AC5DA9 /* TodolistTests.swift */; };
+		BDE0E991247A32E600AC5DA9 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0E990247A32E600AC5DA9 /* SignupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		BDE0E981247950E200AC5DA9 /* TodolistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodolistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE0E985247950E200AC5DA9 /* TodolistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistTests.swift; sourceTree = "<group>"; };
 		BDE0E987247950E200AC5DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE0E990247A32E600AC5DA9 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				BDE0E96E247950E000AC5DA9 /* AppDelegate.swift */,
 				BDE0E970247950E000AC5DA9 /* SceneDelegate.swift */,
 				BDE0E972247950E000AC5DA9 /* ContentView.swift */,
+				BDE0E990247A32E600AC5DA9 /* SignupView.swift */,
 				BDE0E974247950E200AC5DA9 /* Assets.xcassets */,
 				BDE0E979247950E200AC5DA9 /* LaunchScreen.storyboard */,
 				BDE0E97C247950E200AC5DA9 /* Info.plist */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE0E991247A32E600AC5DA9 /* SignupView.swift in Sources */,
 				BDE0E96F247950E000AC5DA9 /* AppDelegate.swift in Sources */,
 				BDE0E971247950E000AC5DA9 /* SceneDelegate.swift in Sources */,
 				BDE0E973247950E000AC5DA9 /* ContentView.swift in Sources */,
