@@ -25,7 +25,10 @@ struct Home: View {
     @State var password = ""
     @State var rem = false
     @State var height: CGFloat = 0
+    @State private var showingAlert = false
     var body: some View {
+        
+        NavigationView {
         ScrollView(UIScreen.main.bounds.height < 750 ? .vertical : (self.height == 0 ? .init() : .vertical) , showsIndicators: false) {
             ZStack {
                 
@@ -81,12 +84,14 @@ struct Home: View {
                             HStack(alignment: .center) {
                                     
                                 Button(action: {
-                                    
+                                    self.showingAlert = true
                                 }, label: {
                                     Text("SIGNIN").fontWeight(.bold).foregroundColor(Color.white).padding(.vertical).padding(.horizontal, 35).background(LinearGradient(gradient:.init(colors: [Color("Color1"),Color("Color")]) , startPoint: .leading, endPoint: .trailing))
                                     .cornerRadius(5)
-                                })
-                            }.padding(.top).padding(.horizontal)
+                                    }).alert(isPresented: $showingAlert, content: {
+                                        Alert(title: Text("Login failed"), message: Text("Check user name or password again"), dismissButton: .cancel())
+                                    })
+                                }.padding(.top).padding(.horizontal)
                             
                             HStack {
                                 
@@ -120,12 +125,10 @@ struct Home: View {
                             HStack {
                                 
                                 Text("New User?").foregroundColor(Color.black.opacity(0.7)).fontWeight(.bold)
+                                NavigationLink(destination: SignupView(),label: {
+                                     Text("SIGNUP").foregroundColor(Color("Color")).fontWeight(.bold)
+                                } )
                                 
-                                Button(action: {
-                                    
-                                }, label: {
-                                    Text("SIGNUP").foregroundColor(Color("Color")).fontWeight(.bold)
-                                })
                             }.padding(.top,30).padding(.bottom)
                             
                             Spacer()
@@ -152,6 +155,8 @@ struct Home: View {
             }
         })
         
-      
+            .navigationBarTitle("Login").navigationBarHidden(true)
+     }
+       .navigationViewStyle(StackNavigationViewStyle())
     }
 }
